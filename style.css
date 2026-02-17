@@ -1,3 +1,10 @@
+/* ====== RESET ====== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* ====== FONDO GENERAL ====== */
 body{
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -6,221 +13,116 @@ body{
 
     background: linear-gradient(
         135deg,
-        #1e3c72,   /* azul */
-        #4facfe,   /* azul claro */
-        #00b09b,   /* verde */
-        #96e6a1,   /* verde claro */
-        #6a11cb,   /* morado */
-        #ff416c,   /* rosa */
-        #ff4b2b,   /* rojo */
-        #ff9a00,   /* naranja */
-        #ffe600    /* amarillo */
+        #1e3c72,
+        #4facfe,
+        #00b09b,
+        #96e6a1,
+        #6a11cb,
+        #ff416c,
+        #ff4b2b,
+        #ff9a00,
+        #ffe600
     );
 
     background-size: 300% 300%;
     animation: fondoMovimiento 18s ease infinite;
 }
 
-/* Animación del fondo */
 @keyframes fondoMovimiento {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-
-/* ====== CONTENEDOR TIPO SLIDE ====== */
+/* ====== HOJAS (CONTENEDORES) ====== */
 .hoja{
     display:none;
     background:white;
     padding:60px;
     border-radius:25px;
-    max-width:1100px;
-    margin:auto;
+    max-width:1000px;
+    width:90%;
+    margin:40px auto;
     box-shadow:0 25px 60px rgba(0,0,0,0.35);
     animation: aparecer 0.5s ease;
 }
-
-
 
 #principal{
     display:block;
     text-align:center;
 }
 
-/* Animación entrada hoja */
 @keyframes aparecer{
     from{ opacity:0; transform:translateY(20px); }
     to{ opacity:1; transform:translateY(0); }
 }
 
+/* ====== TÍTULOS ====== */
+h1{ font-size:50px; color:#c79e0a; margin-bottom:40px; text-align:center; }
+h2{ font-size:40px; color:#6a11cb; margin-bottom:30px; text-align:center; }
+h3{ font-size:30px; color:#ea0c73; margin-top:30px; }
+h4{ font-size:28px; color:#080808; margin-top:25px; }
 
-/* ====== TÍTULOS GRANDES ====== */
-h1{
-    font-size:50px;
-    color:#c79e0a;
-    margin-bottom:40px;
-}
-
-h2{
-    font-size:40px;
-    color:#6a11cb;
-    margin-bottom:30px;
-}
-
-h3{
-    font-size:30px;
-    color:#ea0c73;
-    margin-top:30px;
-}
-
-h4{
-    font-size:30px;
-    color:#080808;
-    margin-top:30px;
-}
-
-
-/* ====== BOTONES PRINCIPALES MULTICOLOR ====== */
+/* ====== BOTONES ====== */
 .btn{
     display:block;
     width:100%;
-    margin:20px 0;
-    padding:26px;
+    margin:15px 0;
+    padding:22px;
     border:none;
     border-radius:20px;
-    font-size:23px;
+    font-size:22px;
     font-weight:bold;
     cursor:pointer;
-    transition: all 0.35s ease;
     color:white;
     box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
 }
 
-/* Colores automáticos */
-.btn:nth-of-type(1){ background:#f014a3; }      /* azul */
-.btn:nth-of-type(2){ background:#4facfe; }      /* azul claro */
-.btn:nth-of-type(3){ background:#c00cd4; }      /* verde */
-.btn:nth-of-type(4){ background:#96e6a1; color:#1e3c72;} /* verde claro */
-.btn:nth-of-type(5){ background:#6a11cb; }      /* morado */
-.btn:nth-of-type(6){ background:#ff416c; }      /* rosa */
-.btn:nth-of-type(7){ background:#ff9a00; }      /* naranja */
-.btn:nth-of-type(8){ background:#ffe600; color:#333;} /* amarillo */
+/* Colores por botón */
+.btn:nth-of-type(1){ background:#1e3c72; }
+.btn:nth-of-type(2){ background:#4facfe; }
+.btn:nth-of-type(3){ background:#00b09b; }
+.btn:nth-of-type(4){ background:#96e6a1; color:#1e3c72; }
+.btn:nth-of-type(5){ background:#6a11cb; }
+.btn:nth-of-type(6){ background:#ff416c; }
+.btn:nth-of-type(7){ background:#ff9a00; }
+.btn:nth-of-type(8){ background:#ffe600; color:#333; }
 
-/* Efecto dinámico */
 .btn:hover{
-    transform:translateY(-6px) scale(1.05);
-    box-shadow:0 18px 40px rgba(0,0,0,0.35);
-    filter:brightness(1.1);
+    transform: translateY(-4px) scale(1.04);
+    filter: brightness(1.1);
 }
 
-
-/* ====== BOTÓN ROJO (NO válido) ====== */
+/* Botón rojo para "no válido" */
 .btn-no{
     background:#ff4b2b !important;
-    box-shadow:0 10px 25px rgba(255,75,43,0.4);
-    font-size:23px;
 }
-
 .btn-no:hover{
     background:#c0392b !important;
-    transform:translateY(-6px) scale(1.06);
+    transform: translateY(-4px) scale(1.05);
 }
 
-
-/* ====== BOTÓN REGRESO ====== */
+/* Botón de regreso */
 .btn-regreso{
-    margin-top:45px;
-    padding:18px 35px;
-    font-size:20px;
+    margin-top:35px;
+    padding:16px 30px;
+    font-size:18px;
     font-weight:bold;
     background:#ff9a00;
     color:white;
     border:none;
     border-radius:15px;
     cursor:pointer;
-    transition: all 0.3s ease;
+    transition:0.3s;
 }
-
 .btn-regreso:hover{
     background:#ffe600;
     color:black;
-    transform:scale(1.08);
+    transform: scale(1.05);
 }
 
-
-/* ====== CONTENIDO DESPLEGABLE ====== */
-.contenido{
-    display:none;
-    background:#f4f6f9;
-    padding:35px;
-    margin-top:15px;
-    border-radius:20px;
-    font-size:22px;
-    line-height:1.9;
-    animation: aparecer 0.4s ease;
-}
-
-.contenido-no{
-    display:none;
-    background:#fdecea;
-    padding:35px;
-    margin-top:15px;
-    border-radius:20px;
-    font-size:22px;
-    line-height:1.9;
-    color:#c0392b;
-    font-weight:bold;
-    animation: aparecer 0.4s ease;
-}
-
-
-/* ====== LISTAS ====== */
-ul{
-    list-style: none;
-    padding-left: 0;
-    font-size:22px;
-}
-
-ul li{
-    margin:12px 0;
-}
-
-
-/* ====== LINK MODO ====== */
-.link-modo{
-    color:#6a11cb;
-    font-weight:bold;
-    cursor:pointer;
-    text-decoration:underline;
-    font-size:22px;
-}
-
-.link-modo:hover{
-    color:#00b09b;
-}
-
-
-/* Logos en esquinas superiores */
-.logo-izq{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 140px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.logo-der{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 140px;
-    height: auto;
-}
-
-
-/* ===== BOTÓN CONTACTO (más pequeño y diferente) ===== */
+/* Botón de contacto */
 .btn-contacto{
     display:inline-block;
     padding:14px 25px;
@@ -229,70 +131,72 @@ ul li{
     font-weight:bold;
     border:none;
     border-radius:30px;
-    background:linear-gradient(45deg, #ff9a00, #ff416c);
+    background:linear-gradient(45deg,#ff9a00,#ff416c);
     color:white;
     cursor:pointer;
     transition:all 0.3s ease;
     box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
-
 .btn-contacto:hover{
     transform:scale(1.08);
     box-shadow:0 12px 30px rgba(0,0,0,0.35);
 }
 
+/* Contenido desplegable */
+.contenido, .contenido-no{
+    display:none;
+    padding:30px;
+    margin-top:15px;
+    border-radius:15px;
+    font-size:20px;
+    line-height:1.8;
+}
+.contenido{ background:#f4f6f9; }
+.contenido-no{ background:#fdecea; color:#c0392b; font-weight:bold; }
 
-/* =======================================
-   📱 AJUSTE PARA CELULAR (SIN ZOOM)
-======================================= */
+/* Listas sin puntos */
+ul{ list-style:none; padding-left:0; }
+ul li{ margin:10px 0; font-size:20px; }
 
+/* Link modo */
+.link-modo{
+    color:#6a11cb;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:underline;
+}
+.link-modo:hover{ color:#00b09b; }
+
+/* Logos esquinas */
+.logo-izq,.logo-der{
+    position: fixed;
+    top: 20px;
+    width: 120px;
+    height:auto;
+    border-radius:50%;
+}
+.logo-izq{ left:20px; }
+.logo-der{ right:20px; }
+
+/* =============================
+   📱 ADAPTACIÓN CELULAR
+============================= */
 @media (max-width: 768px){
 
-    body{
-        padding:15px;
-    }
+    body{ padding:15px; }
 
-    .hoja{
-        padding:25px;
-        border-radius:15px;
-    }
+    .hoja{ padding:25px; border-radius:15px; }
 
-    h1{
-        font-size:28px;
-    }
+    h1{ font-size:28px; }
+    h2{ font-size:24px; }
+    h3,h4{ font-size:20px; }
 
-    h2{
-        font-size:24px;
-    }
+    .btn{ font-size:18px; padding:16px; }
+    .btn-contacto{ font-size:16px; padding:12px 20px; }
+    .btn-regreso{ font-size:16px; padding:12px 20px; }
 
-    h3, h4{
-        font-size:20px;
-    }
+    .contenido,.contenido-no{ font-size:16px; padding:18px; }
+    ul li{ font-size:16px; }
 
-    .btn{
-        font-size:18px;
-        padding:18px;
-    }
-
-    .btn-contacto{
-        font-size:16px;
-        padding:12px 20px;
-    }
-
-    .contenido,
-    .contenido-no{
-        font-size:16px;
-        padding:20px;
-    }
-
-    ul{
-        font-size:16px;
-    }
-
-    /* Logos más pequeños en celular */
-    .logo-izq,
-    .logo-der{
-        width:80px;
-    }
-
+    .logo-izq,.logo-der{ width:80px; top:10px; }
 }
