@@ -209,6 +209,8 @@ Debe coincidir con lo que se declara en la síntesis ejecutiva.
 </ul>
 </div>
 
+<button class="btn-regreso" onclick="mostrarSeccion('principal')">Regresar</button>
+
 <button class="btn-contacto" onclick="toggleIframe('docFrame')">Revisa el documento completo</button>
 
 <div id="docFrame" style="display:none; margin-top:20px;">
@@ -220,7 +222,17 @@ Debe coincidir con lo que se declara en la síntesis ejecutiva.
     </iframe>
 </div>
 
-<button class="btn-regreso" onclick="mostrarSeccion('principal')">Regresar</button>
+<button class="btn-contacto" onclick="toggleIframe('anexosFrame')">Anexos</button>
+
+<div id="anexosFrame" style="display:none; margin-top:20px;">
+    <iframe 
+        src="https://drive.google.com/embeddedfolderview?id=1XitmjRSvPu4TLEBQ2I_NdabqHOo51ft0#grid" 
+        width="100%" 
+        height="600px" 
+        style="border:1px solid #ccc; border-radius:15px;">
+    </iframe>
+</div>
+
 
 </div>
 
@@ -296,6 +308,9 @@ No es solo lo que pasó en el taller o actividad.
 <li>Canalizaciones o apoyos posteriores</li>
 <li>Aprendizajes y mejoras</li>
 </ul>
+
+<img src="imagenes/modo1.jpeg" class="imagen-resp" alt="Modo de Implementación">
+
 
 <button class="btn-regreso" onclick="mostrarSeccion('sintesis')">Regresar</button>
 
