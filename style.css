@@ -13,9 +13,9 @@ body{
 
     background: linear-gradient(
         135deg,
-        #1e3c72,
+        #cc1c5d,
         #4facfe,
-        #00b09b,
+        #8e12d6,
         #96e6a1,
         #6a11cb,
         #ff416c,
@@ -200,3 +200,4 @@ ul li{ margin:10px 0; font-size:20px; }
 
     .logo-izq,.logo-der{ width:80px; top:10px; }
 }
+
