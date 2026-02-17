@@ -1,0 +1,218 @@
+/* ====== FONDO GENERAL ====== */
+body{
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin:0;
+    padding:40px;
+
+    background: linear-gradient(
+        135deg,
+        #1e3c72,   /* azul */
+        #4facfe,   /* azul claro */
+        #00b09b,   /* verde */
+        #96e6a1,   /* verde claro */
+        #6a11cb,   /* morado */
+        #ff416c,   /* rosa */
+        #ff4b2b,   /* rojo */
+        #ff9a00,   /* naranja */
+        #ffe600    /* amarillo */
+    );
+
+    background-size: 300% 300%;
+    animation: fondoMovimiento 18s ease infinite;
+}
+
+/* Animación del fondo */
+@keyframes fondoMovimiento {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* ====== CONTENEDOR TIPO SLIDE ====== */
+.hoja{
+    display:none;
+    background:white;
+    padding:60px;
+    border-radius:25px;
+    max-width:1100px;
+    margin:auto;
+    box-shadow:0 25px 60px rgba(0,0,0,0.35);
+    animation: aparecer 0.5s ease;
+}
+
+#principal{
+    display:block;
+    text-align:center;
+}
+
+/* Animación entrada hoja */
+@keyframes aparecer{
+    from{ opacity:0; transform:translateY(20px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+
+/* ====== TÍTULOS GRANDES ====== */
+h1{
+    font-size:50px;
+    color:#c79e0a;
+    margin-bottom:40px;
+}
+
+h2{
+    font-size:40px;
+    color:#6a11cb;
+    margin-bottom:30px;
+}
+
+h3{
+    font-size:30px;
+    color:#ea0c73;
+    margin-top:30px;
+}
+
+h4{
+    font-size:30px;
+    color:#080808;
+    margin-top:30px;
+}
+
+
+/* ====== BOTONES PRINCIPALES MULTICOLOR ====== */
+.btn{
+    display:block;
+    width:100%;
+    margin:20px 0;
+    padding:26px;
+    border:none;
+    border-radius:20px;
+    font-size:23px;
+    font-weight:bold;
+    cursor:pointer;
+    transition: all 0.35s ease;
+    color:white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Colores automáticos */
+.btn:nth-of-type(1){ background:#f014a3; }      /* azul */
+.btn:nth-of-type(2){ background:#4facfe; }      /* azul claro */
+.btn:nth-of-type(3){ background:#c00cd4; }      /* verde */
+.btn:nth-of-type(4){ background:#96e6a1; color:#1e3c72;} /* verde claro */
+.btn:nth-of-type(5){ background:#6a11cb; }      /* morado */
+.btn:nth-of-type(6){ background:#ff416c; }      /* rosa */
+.btn:nth-of-type(7){ background:#ff9a00; }      /* naranja */
+.btn:nth-of-type(8){ background:#ffe600; color:#333;} /* amarillo */
+
+/* Efecto dinámico */
+.btn:hover{
+    transform:translateY(-6px) scale(1.05);
+    box-shadow:0 18px 40px rgba(0,0,0,0.35);
+    filter:brightness(1.1);
+}
+
+
+/* ====== BOTÓN ROJO (NO válido) ====== */
+.btn-no{
+    background:#ff4b2b !important;
+    box-shadow:0 10px 25px rgba(255,75,43,0.4);
+    font-size:23px;
+}
+
+.btn-no:hover{
+    background:#c0392b !important;
+    transform:translateY(-6px) scale(1.06);
+}
+
+
+/* ====== BOTÓN REGRESO ====== */
+.btn-regreso{
+    margin-top:45px;
+    padding:18px 35px;
+    font-size:20px;
+    font-weight:bold;
+    background:#ff9a00;
+    color:white;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-regreso:hover{
+    background:#ffe600;
+    color:black;
+    transform:scale(1.08);
+}
+
+
+/* ====== CONTENIDO DESPLEGABLE ====== */
+.contenido{
+    display:none;
+    background:#f4f6f9;
+    padding:35px;
+    margin-top:15px;
+    border-radius:20px;
+    font-size:22px;
+    line-height:1.9;
+    animation: aparecer 0.4s ease;
+}
+
+.contenido-no{
+    display:none;
+    background:#fdecea;
+    padding:35px;
+    margin-top:15px;
+    border-radius:20px;
+    font-size:22px;
+    line-height:1.9;
+    color:#c0392b;
+    font-weight:bold;
+    animation: aparecer 0.4s ease;
+}
+
+
+/* ====== LISTAS ====== */
+ul{
+    list-style: none;
+    padding-left: 0;
+    font-size:22px;
+}
+
+ul li{
+    margin:12px 0;
+}
+
+
+/* ====== LINK MODO ====== */
+.link-modo{
+    color:#6a11cb;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:underline;
+    font-size:22px;
+}
+
+.link-modo:hover{
+    color:#00b09b;
+}
+
+
+/* Logos en esquinas superiores */
+.logo-izq{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 140px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo-der{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 140px;
+    height: auto;
+}

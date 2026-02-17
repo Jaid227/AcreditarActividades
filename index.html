@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Acreditación de Actividades</title>
+<link rel="stylesheet" href="style.css">
+
+
+<img src="imagenes/logo_cauce.png" class="logo-izq" alt="Logo izquierdo">
+<img src="imagenes/logo_retoño.png" class="logo-der" alt="Logo derecho">
+
+
+<script>
+function mostrarSeccion(id){
+    const secciones = document.querySelectorAll(".hoja");
+    secciones.forEach(sec => sec.style.display="none");
+    document.getElementById(id).style.display="block";
+}
+
+function toggleInfo(id){
+    const elemento = document.getElementById(id);
+    if(elemento.style.display==="block"){
+        elemento.style.display="none";
+    }else{
+        elemento.style.display="block";
+    }
+}
+</script>
+
+</head>
+<body>
+
+<!-- ===================== HOJA PRINCIPAL ===================== -->
+<div id="principal" class="hoja">
+
+
+
+<button class="btn" onclick="mostrarSeccion('acreditacion')">Acreditación de Actividades</button>
+<button class="btn" onclick="mostrarSeccion('guia')">Guía de Carpeta de Evidencias</button>
+<button class="btn" onclick="mostrarSeccion('sintesis')">Síntesis Ejecutiva</button>
+
+</div>
+
+
+<!-- ===================== HOJA ACREDITACIÓN ===================== -->
+<div id="acreditacion" class="hoja">
+
+<h2>Acreditación de Actividades</h2>
+
+<button class="btn" onclick="toggleInfo('info1')">¿Qué es la acreditación de actividades?</button>
+<div id="info1" class="contenido">
+<p>
+Es el proceso mediante el cual una OSC demuestra oficialmente, con documentación y evidencias verificables, las actividades/proyectos que realiza en materia de asistencia social y/o desarrollo social para obtener una constancia válida para efectos fiscales.
+</p>
+<p><strong>Idea clave:</strong> No es declarar lo que hacemos — es comprobarlo.</p>
+</div>
+
+<button class="btn" onclick="toggleInfo('info2')">¿Para qué sirve?</button>
+<div id="info2" class="contenido">
+<ul>
+<li>Permite validar nuestras actividades ante la Dirección General para el Bienestar y la Cohesión Social (DGBCS)</li>
+<li>Es requisito para poder recibir donativos deducibles</li>
+<li>Sustenta nuestro objeto social con evidencia real</li>
+<li>Da respaldo institucional ante donantes y aliados</li>
+<li>Obliga a ordenar metodología, resultados y evidencias</li>
+</ul>
+<p>Convierte el trabajo en evidencia acreditable.</p>
+</div>
+
+<button class="btn" onclick="toggleInfo('info3')">Elementos indispensables del trámite</button>
+<div id="info3" class="contenido">
+<ul>
+<li>✔ Correspondencia con asistencia o desarrollo social</li>
+<li>✔ Alineación con objeto social y CLUNI</li>
+<li>✔ Reporte en informes anuales</li>
+<li>✔ Síntesis ejecutiva estructurada</li>
+<li>✔ Carpeta de evidencias verificables</li>
+<li>✔ Temporalidad clara</li>
+<li>✔ Población atendida identificable</li>
+<li>✔ Descripción de cómo se implementó</li>
+<li>✔ Resultados</li>
+</ul>
+<p>Si no se puede demostrar → no se acredita.</p>
+</div>
+
+<button class="btn-regreso" onclick="mostrarSeccion('principal')">Regresar</button>
+
+</div>
+
+
+<!-- ===================== HOJA GUÍA ===================== -->
+<div id="guia" class="hoja">
+
+<h2>Guía de Carpeta de Evidencias</h2>
+
+<button class="btn" onclick="toggleInfo('g1')">¿Qué es la carpeta de evidencias?</button>
+<div id="g1" class="contenido">
+<p>
+Es el conjunto organizado de documentos y materiales que prueban que el proyecto realmente se implementó, con qué población, en qué periodo y de qué manera.
+Debe coincidir con lo que se declara en la síntesis ejecutiva.
+
+</p>
+</div>
+
+<button class="btn" onclick="toggleInfo('g2')">¿Qué tipo de evidencias SÍ suman?</button>
+<div id="g2" class="contenido">
+<ul>
+<li>Convenios y oficios</li>
+<li>Cartas descriptivas de actividades</li>
+<li>Materiales de trabajo</li>
+<li>Reportes de implementación</li>
+<li>Productos generados por participantes</li>
+<li>Testimonios escritos o en video</li>
+<li>Registros de seguimiento</li>
+<li>Materiales de difusión</li>
+<li>Constancias o reconocimientos</li>
+<li>Evidencia de apoyos entregados</li>
+<li>Fotografías con actividad verificable</li>
+<li>Videos con interacción real</li>
+<li>Instrumentos aplicados (diagnóstico, evaluación)</li>
+<li>Estudios socioeconómicos/ En nuestro caso Aspectos Sociales y Económicos (ASyE)</li>
+</ul>
+</div>
+
+<button class="btn" onclick="toggleInfo('g3')">Qué debe poder verse con la evidencia</button>
+<div id="g3" class="contenido">
+<ul>
+<li>¿Qué se hizo?</li>
+<li>¿Cómo se hizo?</li>
+<li>¿Con quién se hizo?</li>
+<li>¿Cuándo se hizo?</li>
+<li>¿Dónde se hizo?</li>
+<li>¿Con qué metodología?</li>
+<li>¿Qué resultado generó?</li>
+</ul>
+<p>La evidencia debe contar la historia completa del proyecto.</p>
+</div>
+
+<button class="btn-no" onclick="toggleInfo('g4')">Evidencias que NO son válidas por sí solas</button>
+<div id="g4" class="contenido-no">
+<ul>
+<li>🚫 Listas de asistencia</li>
+<li>🚫 Fotos posadas sin actividad visible</li>
+<li>🚫 Fotos de instalaciones vacías</li>
+<li>🚫 Cartas de recomendación</li>
+<li>🚫 Material sin contexto ni fecha</li>
+<li>🚫 Imágenes sin interacción con población</li>
+</ul>
+</div>
+
+<button class="btn-regreso" onclick="mostrarSeccion('principal')">Regresar</button>
+
+</div>
+
+
+<!-- ===================== HOJA SÍNTESIS ===================== -->
+<div id="sintesis" class="hoja">
+
+<h2>Síntesis Ejecutiva</h2>
+
+<button class="btn" onclick="toggleInfo('s1')">¿Qué es la Síntesis Ejecutiva?</button>
+<div id="s1" class="contenido">
+<p>
+Es el documento que resume cada proyecto acreditable y explica de forma estructurada:
+qué se hizo, para qué, con quién, cuándo, dónde, cómo (modo) y qué resultados generó.
+Debe coincidir con las evidencias.
+</p>
+</div>
+
+<button class="btn" onclick="toggleInfo('s2')">
+Elementos indispensables de la Síntesis Ejecutiva
+</button>
+
+<div id="s2" class="contenido">
+<ul>
+<li>✔ Actividad/proyecto</li>
+<li>✔ Objetivo</li>
+<li>✔ Población atendida</li>
+<li>✔ Periodo (inicio–fin)</li>
+<li>✔ Lugar</li>
+<li>✔ <span class="link-modo" onclick="mostrarSeccion('modo')">Modo de implementación</span></li>
+<li>✔ Resultados</li>
+</ul>
+</div>
+
+<button class="btn-regreso" onclick="mostrarSeccion('principal')">Regresar</button>
+
+</div>
+
+
+<!-- ===================== HOJA MODO ===================== -->
+<div id="modo" class="hoja">
+
+<h2>Modo de Implementación</h2>
+<h4>El modo es la descripción paso a paso de cómo se diseñó, organizó y ejecutó el proyecto.
+No es solo lo que pasó en el taller o actividad.
+</h4>
+<h3>ANTES (planeación y diseño)</h3>
+<ul>
+<li>Diagnóstico o necesidad detectada</li>
+<li>Definición de objetivos</li>
+<li>Diseño metodológico</li>
+<li>Planeación de sesiones/acciones</li>
+<li>Preparación de materiales</li>
+<li>Convocatoria y selección de población</li>
+<li>Coordinación con aliados (si aplica)</li>
+</ul>
+
+<h3>DURANTE (implementación)</h3>
+<ul>
+<li>Cómo se realizaron las actividades</li>
+<li>Técnicas y metodologías usadas</li>
+<li>Dinámica de trabajo</li>
+<li>Materiales aplicados</li>
+<li>Interacción con participantes</li>
+<li>Ajustes realizados</li>
+</ul>
+
+<h3>DESPUÉS (cierre y seguimiento)</h3>
+<ul>
+<li>Evaluación aplicada</li>
+<li>Resultados observados</li>
+<li>Productos generados</li>
+<li>Seguimiento a participantes</li>
+<li>Canalizaciones o apoyos posteriores</li>
+<li>Aprendizajes y mejoras</li>
+</ul>
+
+<button class="btn-regreso" onclick="mostrarSeccion('sintesis')">Regresar</button>
+
+</div>
+
+</body>
+</html>
