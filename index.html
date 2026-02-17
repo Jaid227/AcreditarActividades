@@ -30,6 +30,37 @@ function toggleInfo(id){
 </head>
 <body>
 
+<!-- ===================== HOJA CONTACTO ===================== -->
+<div id="contacto" class="hoja">
+
+<h4>Contacto de Evaluación</h4>
+
+<div class="contenido" style="display:block;">
+
+<p><strong>Responsable de Evaluación:</strong></p>
+<p>Sonia Moran Jarquin</p>
+
+<p><strong>Correo electrónico:</strong></p>
+<p>consultant.jarquin@gmail.com</p>
+
+<p><strong>Whatsapp:</strong></p>
+<p>(55) 3262 5559</p>
+
+<p><strong>Horario de atención:</strong></p>
+<p>Lunes a viernes de 10:00 a 19:00 horas</p>
+
+<p>
+Para cualquier revisión, aclaración o seguimiento relacionado con la acreditación de actividades,
+puede comunicarse a través de los medios anteriores.
+</p>
+
+</div>
+
+<button class="btn-regreso" onclick="mostrarSeccion('principal')">Regresar</button>
+
+</div>
+
+
 <!-- ===================== HOJA PRINCIPAL ===================== -->
 <div id="principal" class="hoja">
 
@@ -38,8 +69,15 @@ function toggleInfo(id){
 <button class="btn" onclick="mostrarSeccion('acreditacion')">Acreditación de Actividades</button>
 <button class="btn" onclick="mostrarSeccion('guia')">Guía de Carpeta de Evidencias</button>
 <button class="btn" onclick="mostrarSeccion('sintesis')">Síntesis Ejecutiva</button>
+<button class="btn-contacto" onclick="mostrarSeccion('contacto')">
+Contacto de Evaluación
+</button>
+
 
 </div>
+
+
+
 
 
 <!-- ===================== HOJA ACREDITACIÓN ===================== -->
@@ -52,7 +90,7 @@ function toggleInfo(id){
 <p>
 Es el proceso mediante el cual una OSC demuestra oficialmente, con documentación y evidencias verificables, las actividades/proyectos que realiza en materia de asistencia social y/o desarrollo social para obtener una constancia válida para efectos fiscales.
 </p>
-<p><strong>Idea clave:</strong> No es declarar lo que hacemos — es comprobarlo.</p>
+<p>No es declarar lo que hacemos — es comprobarlo.</p>
 </div>
 
 <button class="btn" onclick="toggleInfo('info2')">¿Para qué sirve?</button>
@@ -229,6 +267,7 @@ No es solo lo que pasó en el taller o actividad.
 <button class="btn-regreso" onclick="mostrarSeccion('sintesis')">Regresar</button>
 
 </div>
+
 
 </body>
 </html>
