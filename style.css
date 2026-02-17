@@ -98,6 +98,7 @@ h4{ font-size:28px; color:#080808; margin-top:25px; }
 .btn-no{
     background:#ff4b2b !important;
     font-size:23px;
+    padding: 11px 32px;
 }
 .btn-no:hover{
     background:#c0392b !important;
@@ -178,6 +179,18 @@ ul li{ margin:10px 0; font-size:20px; }
 }
 .logo-izq{ left:20px; }
 .logo-der{ right:20px; }
+
+/* Imagen adaptable */
+.imagen-resp {
+    width: 100%;       /* Ocupa todo el ancho disponible */
+    max-width: 800px;  /* Máximo ancho para que no se haga demasiado grande */
+    height: auto;      /* Mantiene la proporción original */
+    display: block;    /* Centrar y eliminar espacios extra */
+    margin: 20px auto; /* Centrar horizontalmente con margen superior e inferior */
+    border-radius: 15px; /* Opcional: bordes redondeados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Opcional: sombra */
+}
+
 
 /* =============================
    📱 ADAPTACIÓN CELULAR
