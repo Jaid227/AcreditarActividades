@@ -240,3 +240,59 @@ ul li{
     transform:scale(1.08);
     box-shadow:0 12px 30px rgba(0,0,0,0.35);
 }
+
+
+/* =======================================
+   📱 AJUSTE PARA CELULAR (SIN ZOOM)
+======================================= */
+
+@media (max-width: 768px){
+
+    body{
+        padding:15px;
+    }
+
+    .hoja{
+        padding:25px;
+        border-radius:15px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    h3, h4{
+        font-size:20px;
+    }
+
+    .btn{
+        font-size:18px;
+        padding:18px;
+    }
+
+    .btn-contacto{
+        font-size:16px;
+        padding:12px 20px;
+    }
+
+    .contenido,
+    .contenido-no{
+        font-size:16px;
+        padding:20px;
+    }
+
+    ul{
+        font-size:16px;
+    }
+
+    /* Logos más pequeños en celular */
+    .logo-izq,
+    .logo-der{
+        width:80px;
+    }
+
+}
